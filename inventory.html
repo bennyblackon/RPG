@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory - RPG Creator</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+nav{
+    background:#1e293b;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.page-title{
+    text-align:center;
+    color:gold;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.stat-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat-card h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+.inventory-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.item-card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 12px rgba(255,215,0,0.15);
+    transition:0.3s;
+}
+
+.item-card:hover{
+    transform:translateY(-5px);
+}
+
+.item-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.item-name{
+    color:gold;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.rarity{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.common{
+    background:#64748b;
+}
+
+.rare{
+    background:#2563eb;
+}
+
+.epic{
+    background:#9333ea;
+}
+
+.legendary{
+    background:#f59e0b;
+    color:black;
+}
+
+.item-description{
+    color:#cbd5e1;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    background:gold;
+    color:black;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:#1e293b;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">RPG Creator</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="create-character.html">Characters</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="quests.html">Quests</a></li>
+        <li><a href="profile.html">Profile</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1 class="page-title">Inventory</h1>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>Total Items</h3>
+            <p>48</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Gold</h3>
+            <p>12,450</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Potions</h3>
+            <p>16</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Equipment</h3>
+            <p>12</p>
+        </div>
+
+    </div>
+
+    <div class="inventory-grid">
+
+        <div class="item-card">
+            <div class="item-icon">⚔️</div>
+            <h2 class="item-name">Iron Sword</h2>
+            <div class="rarity common">Common</div>
+            <p class="item-description">
+                Reliable weapon used by beginner warriors.
+            </p>
+            <button class="btn">Equip</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">🛡️</div>
+            <h2 class="item-name">Knight Shield</h2>
+            <div class="rarity rare">Rare</div>
+            <p class="item-description">
+                Strong shield that increases defense.
+            </p>
+            <button class="btn">Equip</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">🧪</div>
+            <h2 class="item-name">Health Potion</h2>
+            <div class="rarity common">Common</div>
+            <p class="item-description">
+                Restores health during battle.
+            </p>
+            <button class="btn">Use</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">🔮</div>
+            <h2 class="item-name">Wizard Staff</h2>
+            <div class="rarity epic">Epic</div>
+            <p class="item-description">
+                Boosts magical power significantly.
+            </p>
+            <button class="btn">Equip</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">💎</div>
+            <h2 class="item-name">Ancient Gem</h2>
+            <div class="rarity legendary">Legendary</div>
+            <p class="item-description">
+                Rare artifact from a forgotten kingdom.
+            </p>
+            <button class="btn">Inspect</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">🏹</div>
+            <h2 class="item-name">Elven Bow</h2>
+            <div class="rarity rare">Rare</div>
+            <p class="item-description">
+                Lightweight bow with excellent accuracy.
+            </p>
+            <button class="btn">Equip</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">👑</div>
+            <h2 class="item-name">Royal Crown</h2>
+            <div class="rarity legendary">Legendary</div>
+            <p class="item-description">
+                Symbol of the ancient rulers of the realm.
+            </p>
+            <button class="btn">Inspect</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">📜</div>
+            <h2 class="item-name">Magic Scroll</h2>
+            <div class="rarity epic">Epic</div>
+            <p class="item-description">
+                Contains a powerful spell waiting to be cast.
+            </p>
+            <button class="btn">Use</button>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 RPG Creator
+</footer>
+
+</body>
+</html>
