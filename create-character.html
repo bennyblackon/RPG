@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Character - RPG Creator</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+nav{
+    background:#1e293b;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+.container{
+    max-width:800px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.form-box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(255,215,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:gold;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#334155;
+    color:white;
+}
+
+input:focus,
+select:focus{
+    outline:2px solid gold;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.stat-card{
+    background:#334155;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.preview{
+    margin-top:30px;
+    background:#334155;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.avatar{
+    font-size:70px;
+    margin-bottom:10px;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    margin-top:25px;
+    background:gold;
+    color:black;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">RPG Creator</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="create-character.html">Create Character</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="form-box">
+
+        <h1>Create Your Hero</h1>
+
+        <form>
+
+            <div class="input-group">
+                <label>Character Name</label>
+                <input type="text" placeholder="Enter hero name">
+            </div>
+
+            <div class="input-group">
+                <label>Class</label>
+                <select>
+                    <option>Warrior ⚔</option>
+                    <option>Mage 🔮</option>
+                    <option>Archer 🏹</option>
+                    <option>Assassin 🗡</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Hair Color</label>
+                <select>
+                    <option>Black</option>
+                    <option>Brown</option>
+                    <option>Blonde</option>
+                    <option>Red</option>
+                    <option>White</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Eye Color</label>
+                <select>
+                    <option>Blue</option>
+                    <option>Brown</option>
+                    <option>Green</option>
+                    <option>Grey</option>
+                </select>
+            </div>
+
+            <h2 style="color:gold; margin:20px 0;">
+                Starting Stats
+            </h2>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <h3>Strength</h3>
+                    <p>15</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Defense</h3>
+                    <p>12</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Magic</h3>
+                    <p>18</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Speed</h3>
+                    <p>14</p>
+                </div>
+
+            </div>
+
+            <div class="preview">
+
+                <div class="avatar">🧙</div>
+
+                <h2>Character Preview</h2>
+
+                <p>Your hero's appearance and stats will be displayed here.</p>
+
+            </div>
+
+            <button class="btn" type="submit">
+                Create Character
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 RPG Creator
+</footer>
+
+</body>
+</html>
